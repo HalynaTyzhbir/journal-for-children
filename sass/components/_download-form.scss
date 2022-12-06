@@ -1,0 +1,38 @@
+.download-form {
+    &__box {
+        display: flex;
+        flex-direction: column;
+        gap: 13px;
+        margin-bottom: 21px;
+    }
+
+    &__input {
+        border: 2px solid $btnOrangeColor;
+        padding: 10px 30px;
+
+        &::placeholder {
+            font-family: $fontGeometria;
+            font-weight: 700;
+            font-size: $baseFontSize;
+            line-height: 1.28;
+            text-align: center;
+            color: rgba(235, 98, 36, 0.4);
+        }
+    }
+
+    &__button {
+        font-family: $fontGeometria;
+        font-weight: 700;
+        font-size: $baseFontSize;
+        line-height: 1.28;
+        text-align: center;
+        color: $btnWhiteColor;
+
+        background-color: $btnOrangeColor;
+        transition: background-color $transition;
+
+        &:hover, &:focus {
+            background-color: $btnVideoIcon;
+        }
+    }
+}

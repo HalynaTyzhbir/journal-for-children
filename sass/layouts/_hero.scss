@@ -1,0 +1,77 @@
+.hero {
+    background-color: lightgray;
+    background-image: url("../img/bg-header-mob.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 153px;
+    padding-bottom: 204px;
+
+    margin-top: -118px;
+
+    @include tablet {
+        background-image: url("../img/bg-header-desktop.jpg");
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: $baseFontSize;
+        line-height: 1.2;
+        text-align: center;
+        color: $textColorWhite;
+
+        max-width: 282px;
+        margin-bottom: 31px;
+        margin-right: auto;
+        margin-left: auto;
+
+        @include tablet {
+            text-align: left;
+            margin-left: 0;
+            margin-bottom: 19px;
+        }
+    }
+
+    &__callphrase {
+        font-family: $fontAmatic;
+        font-size: 40px;
+        line-height: 1.07;
+        text-align: center;
+        color: $textColorWhite;
+                
+        display: block;
+
+        max-width: 315px;
+        margin-bottom: 47px;
+        margin-right: auto;
+        margin-left: auto;
+
+        @include mobile {
+            min-width: 452px;
+            font-size: $titleFontSize;
+        }
+
+        @include tablet {
+            text-align: left;
+            margin-left: 0;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__link {
+        font-weight: 700;
+        line-height: 1.22;
+        color: $textLinkColorOrange;
+        background-color: $btnWhiteColor;
+        transition: color $transition, background-color $transition;
+
+        &:hover, &:focus {
+            color: $textLinkColorWhite;
+            background-color: $btnOrangeColor;
+        }
+
+        @include tablet {
+            margin-left: 0;
+        }
+    }
+}

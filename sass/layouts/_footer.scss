@@ -1,0 +1,88 @@
+.footer {
+    padding-top: 96px;
+    padding-bottom: 46px;
+    background-image: linear-gradient(transparent, transparent 20%, #00C5F2 20%, #00C5F2), url(../img/footer-top-bg.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    @include desktop {
+        padding-top: 138px;
+    }
+
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        @include desktop {
+            align-items: flex-start;
+            gap: 44px;
+        }
+    }
+
+    &__top-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        @include desktop {
+            flex-direction: row;
+            gap: 42px;
+        }
+    }
+
+    &__address-wrap {
+        @include desktop {
+            min-width: 386px;
+        }
+    }
+
+    &__title {
+        font-family: $fontAmatic;
+        font-size: $titleFontSize;
+        line-height: 1.27;
+        text-align: center;
+        color: $textColorWhite;
+    }
+
+    &__text {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 1.67;
+        color: $textColorWhite;
+    }
+
+    &__warning {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 1.42;
+        color: $textColorWhite;
+        @include desktop {
+            font-size: 16px;
+            line-height: 1.88;
+        }
+    }
+}
+
+.footer-address {
+    font-style: normal;
+
+    &__name {
+        font-weight: 700;
+        line-height: 1.67;
+        color: #FFFFFF;
+    }
+
+    &__link {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 1.67;
+        color: $textLinkColorWhite;
+
+        &:last-child {
+            display: block;
+        }
+
+        &:hover, &:focus {
+            color: $btnDarkBlueColor;
+        }
+    }
+}

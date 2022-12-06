@@ -1,0 +1,114 @@
+.reviews{
+    margin-bottom: 85px;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        font-family: $fontAmatic;
+        font-size: $titleFontSize;
+        line-height: 1.27;
+        text-align: center;
+        color: $textColorDarkBlue;
+        margin-bottom: 70px;
+        @include desktop {
+            margin-bottom: 94px;
+        }
+    }
+
+    &__person {
+        font-family: $fontAmatic;
+        font-size: $secondFontSize;
+        line-height: 1.25;
+        text-align: center;
+        color: $textColorDarkBlue;
+        margin-bottom: 17px;
+        @include desktop {
+            font-size: 48px;
+        }
+    }
+
+    &__text {
+        font-size: 13px;
+        line-height: 1.7;
+        text-align: center;
+        color: $textColorDarkBlue;
+        @include desktop {
+            font-size: $baseFontSize;
+            line-height: 1.67;
+        }
+    }
+
+    &__item {
+        position: relative;
+
+        border: 2px solid #322F82;
+        box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.4);
+        border-radius: 30px;
+
+        width: 328px;
+
+        padding: 65px 5px 25px;
+        @include desktop {
+            width: 498px;
+            padding: 97px 30px 40px;
+        }
+    }
+
+    &__img {
+        position: absolute;
+
+        top: -20%;
+        left: 50%;
+
+        transform: translateX(-50%);
+        @include desktop {
+            width: 128px;
+        }
+    }
+
+    &__list {
+        @include desktop {
+            display: flex;
+            gap: 22px;
+        }
+    }
+
+    // .mobile {
+    //     scale: 50%;
+    //     @media screen and (max-width:1200px){
+    //         display: none;
+    //     }
+    // }
+
+    &__slider {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        @include mobile {
+            gap: 20px;
+        }
+        @include tablet {
+            gap: 40px;
+        }
+    }
+
+    .slider-button {
+        @media screen and (max-width:420px){
+            display: none;
+        }
+        background: transparent;
+        border: transparent;
+    }
+
+    .slider-icon {
+        width: 24px;
+        height: 44px;
+        fill:$btnDarkBlueColor;
+        stroke: $btnDarkBlueColor;
+    }
+}

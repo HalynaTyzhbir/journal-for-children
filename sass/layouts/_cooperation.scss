@@ -1,0 +1,14 @@
+.cooperation {
+    padding-bottom: 40px;
+    &__title {
+        font-family: $fontAmatic;
+        font-size: $titleFontSize;
+        line-height: 1.27;
+        text-align: center;
+        color: $textColorDarkBlue;
+        margin-bottom: 24px;
+        @include desktop {
+            margin-bottom: 31px;
+        }
+    }
+}

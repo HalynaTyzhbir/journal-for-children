@@ -1,0 +1,223 @@
+.about {
+    position: relative;
+    padding-top: 26px;
+    @include tablet {
+        padding-top: 45px;
+    }
+
+    &__bg-left {
+        position: absolute;
+        top: 0;
+        left: 0;
+    
+        width: 214px;
+        height: 437px;
+        background-image: url("../img/about-left-part.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 214px 437px;
+        opacity: 0.5;
+    
+            @include tablet {
+            width: 320px;
+            height: 670px;
+            background-image: url("../img/about-left-part-desktop-1.svg");
+            background-size: 319px 652px;
+            }
+    }
+    
+    &__bg-left::before {
+        @include desktop {
+            content: " ";
+    
+            position: absolute;
+            top: 0;
+            left: 320px;
+    
+            display: block;
+            width: 363px;
+            height: 192px;
+            background-image: url("../img/about-left-part-desktop-2.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            transform: rotate(3.45deg);
+        }
+    }
+    
+    &__bg-right {
+        position: absolute;
+        top: 0;
+        right: 0;
+    
+        width: 314px;
+        height: 181px;
+        background-image: url("../img/about-right-part.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 314px 181px;
+        opacity: 0.5;
+    
+        @include tablet {
+            width: 320px;
+            height: 670px;
+            background-image: url("../img/about-right-part-desktop-2.svg");
+            background-size: 320px 671px;
+        }
+    }
+    
+    &__bg-right::before {
+        @include desktop {
+            content: " ";
+    
+            position: absolute;
+            top: 0;
+            right: 260px;
+    
+            display: block;
+            width: 370px;
+            height: 214px;
+            background-image: url("../img/about-right-part-desktop-1.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            transform: rotate(3.9deg);
+        }
+    }
+
+
+    &__container {
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        @include desktop {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include tablet {
+            width: 650px;
+        }
+    }
+
+    &__title {
+        font-family: $fontAmatic;
+        font-size: $titleFontSize;
+        line-height: 1.07;
+        color: $textColorOrange;
+        margin-bottom: 27px;
+        @include tablet {
+            margin-bottom: 30px;
+        }
+    }
+    @media screen and (max-width:1199px) {
+        &__title::after {
+            content: " ";
+            display: block;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            border-bottom: 1px solid $btnOrangeColor;
+        }
+    }
+
+    &__img {
+        display: none;
+        @include tablet {
+            display: block;
+            z-index: 1;
+        }
+    }
+
+    &__text {
+        font-size: 18px;
+        line-height: 1.33;
+        color: $textColorOrange;
+        margin-bottom: 12px;
+        @include tablet {
+            margin-bottom: 45px;
+        }
+    }
+
+    &__description {
+        font-weight: 700;
+        line-height: 1.22;
+        text-align: center;
+        color: $textColorOrange;
+        @include calc (3, 50px);
+    }
+
+    &__wrap {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 5px;
+        @include tablet {
+            gap: 15px;
+        }
+    }
+
+    .children-picture::before {
+        content: " ";
+        display: block;
+        width: 113px;
+        height: 103px;
+        background-image:
+            url("../img/bg-about-1-front.svg"), url("../img/bg-about-1-back.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-bottom: 12px;
+        margin-right: auto;
+        margin-left: auto;
+        @include tablet {
+            width: 152px;
+            height: 137px;
+            margin-bottom: 15px;
+        }
+    }
+
+    .pages-quantity::before {
+        content: " ";
+        display: block;
+        width: 113px;
+        height: 103px;
+        background-image:
+            url("../img/bg-about-2-front.svg"), url("../img/bg-about-2-back.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-bottom: 12px;
+        margin-right: auto;
+        margin-left: auto;
+        @include tablet {
+            width: 152px;
+            height: 137px;
+            margin-bottom: 15px;
+        }
+    }
+
+    .circulation-quantity::before {
+        content: " ";
+        display: block;
+        width: 113px;
+        height: 103px;
+        background-image:
+            url("../img/bg-about-3-front.svg"), url("../img/bg-about-3-back.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-bottom: 12px;
+        margin-right: auto;
+        margin-left: auto;
+        @include tablet {
+            width: 152px;
+            height: 137px;
+            margin-bottom: 15px;
+        }
+    }
+
+}

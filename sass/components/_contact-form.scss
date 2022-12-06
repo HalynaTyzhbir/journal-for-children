@@ -1,0 +1,88 @@
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    @include desktop {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    &__left-wrap, &__right-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+        @include desktop {
+            gap: 20px;
+        }
+    }
+
+    &__input {
+        position: relative;
+        width: 309px;
+        min-height: 62px;
+        border: 1px solid $btnDarkBlueColor;
+        border-radius: 20px;
+        padding: 10px 20px;
+
+        &::placeholder {
+            font-family: $fontBalsamiq;
+            font-size: 14px;
+            line-height: 1.86;
+            color: $textColorDarkBlue;
+            opacity: 0.5;
+            text-align: center;
+        }
+
+        @include tablet {
+            width: 558px;
+            min-height: 50px;
+            &::placeholder {
+                text-align: left;
+            }
+        }
+    } 
+    .message::placeholder {
+        @media screen and (max-width:767px) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        }
+    }
+
+    .message {
+        resize: none;
+        @include tablet {
+            height: 190px;
+        }
+    }
+
+    &__button {
+        font-family: $fontBalsamiq;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.62;
+        text-align: center;
+        color: $btnWhiteColor;
+
+        background: $btnDarkBlueColor;
+        border-radius: 20px;
+
+        width: 309px;
+        min-height: 62px;
+
+        transition: background-color $transition;
+
+        &:hover, &:focus {
+            background-color: $btnLightBlueColor;
+        }
+
+        @include tablet {
+            width: 558px;
+        }
+    }
+}

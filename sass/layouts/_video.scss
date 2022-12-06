@@ -1,0 +1,176 @@
+.video {
+    @media screen and (max-width:400px) {
+        display: none;
+    }
+    position: relative;
+    padding-top: 84px;
+    padding-bottom: 57px;
+    @include tablet {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    }
+
+    &__bg-left {
+    position: absolute;
+    top: 15px;
+    left: 0;
+
+    width: 204px;
+    height: 427px;
+    background-image: url("../img/video-left-part.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 204px 427px;
+    opacity: 0.5;
+
+    @include tablet {
+        width: 320px;
+        height: 670px;
+        background-image: url("../img/video-left-part-desktop-1.svg");
+        background-size: 320px 670px;
+    }
+    }
+
+    &__bg-left::before {
+        @include desktop {
+            content: " ";
+                
+            position: absolute;
+            top: 0;
+            left: 300px;
+                
+            display: block;
+            width: 370px;
+            height: 214px;
+            background-image: url("../img/video-left-part-desktop-2.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            transform: rotate(3.9deg);
+        }
+    }
+
+    &__bg-left::after {
+        @include desktop {
+            content: " ";
+            
+            position: absolute;
+            top: 344px;
+            left: 300px;
+            
+            display: block;
+            width: 363px;
+            height: 192px;
+            background-image: url("../img/video-left-part-desktop-3.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            transform: rotate(3.45deg);
+        }
+    }
+
+    &__bg-right {
+        position: absolute;
+        top: 15px;
+        right: 0;
+        
+        width: 242px;
+        height: 494px;
+        background-image: url("../img/video-right-part.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 242px 494px;
+        opacity: 0.5;
+
+        @include tablet {
+            width: 319px;
+            height: 652px;
+            background-image: url("../img/video-right-part-desktop-3.svg");
+            background-size: 319px 652px;
+        }
+    }
+
+    &__bg-right::before {
+        @include desktop {
+            content: " ";
+    
+            position: absolute;
+            top: 0;
+            right: 242px;
+    
+            display: block;
+            width: 363px;
+            height: 192px;
+            background-image: url("../img/video-right-part-desktop-1.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            transform: rotate(3.45deg);
+        }
+    }
+    
+    &__bg-right::after {
+        @include desktop {
+            content: " ";
+    
+            position: absolute;
+            top: 430px;
+            right: 242px;
+    
+            display: block;
+            width: 363px;
+            height: 192px;
+            background-image: url("../img/video-right-part-desktop-2.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            transform: rotate(3.9deg);
+        }
+    }
+
+    &__container {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__wrap {
+        position: relative;
+
+        width: 372px;
+        border-radius: 30px;
+
+        @include tablet {
+            width: 720px;
+            height: 360px;
+        }
+    }
+
+    &__size {
+        @include tablet {
+        width: 720px;
+        height: 360px;
+        }
+    }
+
+    &__button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 72px;
+        height: 73px;
+        border-radius: 50%;
+        border: 2px solid #ffffff;
+        background-color: $btnVideoIcon;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color $transition;
+
+        &:hover, &:focus {
+            background-color: $btnOrangeColor;
+        }
+    }
+
+    &__icon {
+        fill: #ffffff;
+    }
+}

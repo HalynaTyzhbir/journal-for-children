@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Розумашка</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Balsamiq+Sans:wght@400;700&family=Geo&family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__container">
+        <a class="logo link" href="./index.html">
+          <img
+            class="logo__img"
+            src="./img/logo.svg"
+            alt="лого"
+            width="174"
+            height="100"
+          />
+        </a>
+        <nav class="navigation">
+          <ul class="menu list" id="mob-menu" data-menu>
+            <li class="menu__item">
+              <a class="menu__link link" href="">Про журнал</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link link" href="">Передплата</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link link" href="">Контакти</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link link" href="">Співпраця</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link link" href="">Відзнаки</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link link" href="">Акції</a>
+            </li>
+          </ul>
+        </nav>
+        <button
+          class="menu-button button"
+          type="button"
+          aria-expanded="false"
+          data-menu-button
+        >
+          <svg
+            class="menu-icon"
+            width="34"
+            height="20"
+            aria-label="Перемикач мобільного меню"
+            aria-controls="mob-menu"
+          >
+            <use class="icon-menu" href="./img/sprite.svg#icon-menu"></use>
+            <use
+              class="icon-close-menu"
+              href="./img/sprite.svg#icon-close-menu"
+            ></use>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero__container">
+          <h1 class="hero__title">
+            Найкраще періодичне видання для дітей та юнацтва
+          </h1>
+          <b class="hero__callphrase">
+            Передплата в один клік - а радості на весь рік
+          </b>
+          <a class="button-main hero__link link" href="#"
+            >Передплатити “Розумашки”</a
+          >
+        </div>
+      </section>
+      <section class="about">
+        <div class="about__bg-left"></div>
+        <div class="about__bg-right"></div>
+        <div class="container about__container">
+          <div class="about__img">
+            <img src="./img/diplom.png" alt="diplom" width="569" height="561" />
+          </div>
+          <div class="about__box">
+            <h2 class="about__title">Про журнал</h2>
+            <p class="about__text">
+              Журнал розрахований на читачів від 6 років, цікавий для методистів
+              і вчителів молодших класів. Матеріал подається доступною для
+              дитини мовою та оздоблений оригінальними малюнками. Ігрові
+              завдання, кросворди та саморобки формують емоційний інтелект,
+              уважність, розвивають логічне мислення та дрібну моторику рук.
+              Художньо-публіцистичні тексти й дитячі оповідання формують навички
+              читання та грамотного письма, стимулюють розвиток фантазії,
+              заохочують до пізнання довколишнього світу.
+            </p>
+            <div class="about__wrap">
+              <p class="about__description children-picture">
+                Для дітей від 6 років
+              </p>
+              <p class="about__description pages-quantity">
+                32 сторінки яскравого контенту
+              </p>
+              <p class="about__description circulation-quantity">
+                тираж 25 тисяч
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="video">
+        <div class="video__bg-left"></div>
+        <div class="video__bg-right"></div>
+        <div class="container video__container">
+          <h2 class="visually-hidden">For SEO</h2>
+          <div class="video__wrap">
+            <video
+              class="video__size"
+              width="372"
+              height="186"
+              poster="./img/video.jpg"
+            >
+              <source src="movie.mp4" type="video/mp4" />
+              <source src="movie.ogg" type="video/ogg" />
+              Your browser does not support the video tag.
+            </video>
+            <button class="video__button" type="button">
+              <svg class="video__icon" width="22" height="42">
+                <use href="./img/sprite.svg#icon-play"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="chapters">
+        <div class="chapters__bg-left"></div>
+        <div class="chapters__bg-right"></div>
+        <div class="container chapters__container">
+          <h2 class="chapters__title">Рубрики</h2>
+          <picture>
+            <source
+              srcset="./img/chapters-img-desktop.png"
+              media="(min-width: 1200px)"
+              sizes="(min-width: 1200px) 1193px"
+            />
+            <img
+              class="chapters__img"
+              src="./img/chapters-img.png"
+              alt="chapters of journal"
+              width="427"
+            />
+          </picture>
+        </div>
+      </section>
+      <section class="discount">
+        <div class="discount__top"></div>
+        <div class="container discount__container">
+          <h2 class="discount__title">Акції</h2>
+          <h3 class="discount__after-title">Влаштуй дитині свято</h3>
+          <p class="discount__text">
+            Купуй річний комплект журналів 11 номерів та отримуй приємну знижку
+          </p>
+          <ul class="discount__list list">
+            <li class="discount__item">
+              <span class="discount__number">165 грн</span>
+              <span class="discount__price">280 грн</span>
+              <p class="discount__info">журнали 2018 року</p>
+            </li>
+            <li class="discount__item">
+              <span class="discount__number">275 грн</span>
+              <span class="discount__price">363 грн</span>
+              <p class="discount__info">журнали 2019 року</p>
+            </li>
+          </ul>
+          <a class="button-main discount__link link" href="#">Купити</a>
+          <img
+            class="discount__img"
+            src="./img/girl.png"
+            alt="little girl is happy"
+            width="1580"
+            height="888"
+          />
+        </div>
+        <div class="discount__bottom"></div>
+      </section>
+      <section class="free-example">
+        <div class="free-example__bg-left"></div>
+        <div class="free-example__bg-right"></div>
+        <div class="container free-example__container">
+          <div class="free-example__img-wrap">
+            <p class="free-example__info">
+              Cвіженький номер - Березень №3, 2020
+            </p>
+            <picture>
+              <source
+                srcset="./img/free-example-desktop.png"
+                media="(min-width: 768px)"
+                sizes="(min-width: 768px) 706px"
+              />
+              <img
+                class="free-example__img"
+                src="./img/free-example.png"
+                alt="example of the journal"
+                width="300"
+              />
+            </picture>
+          </div>
+          <div class="free-example__order-wrap">
+            <h2 class="free-example__title">
+              Завантажуй безкоштовний примірник журналу
+            </h2>
+            <form class="download-form">
+              <div class="download-form__box">
+                <label class="download-form__label">
+                  <input
+                    class="download-form__input button-main"
+                    type="text"
+                    name="name"
+                    placeholder="Ваше Ім’я"
+                  />
+                </label>
+                <label class="download-form__label">
+                  <input
+                    class="download-form__input button-main"
+                    type="email"
+                    name="email"
+                    placeholder="Ваш Email"
+                  />
+                </label>
+              </div>
+              <button
+                class="download-form__button button button-main"
+                type="submit"
+              >
+                Завантажити
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="latest">
+        <div class="container latest__container">
+          <picture>
+            <source
+              srcset="./img/latest-img-desktop.png"
+              media="(min-width: 768px)"
+              sizes="(min-width: 768px) 540px"
+            />
+            <img
+              class="latest__img"
+              src="./img/latest-img.png"
+              alt="example of the latest journal"
+              width="271"
+            />
+          </picture>
+          <div class="latest__wrap">
+            <h2 class="latest__title">свіжий номер</h2>
+            <p class="latest__text">
+              Не завжди можна потрапити в театр… Але це можна виправити:
+              відкриваємо «Розумашки» №12 й одразу опиняємося на святі, ім’я
+              якому – ТЕАТР! Отже, лунає третій дзвінок, і ми починаємо…
+            </p>
+            <ul class="latest__list">
+              <li class="latest__item">Які бувають театри?</li>
+              <li class="latest__item">
+                Хто в театрі працює? Актори, і не тільки: знайомимося з
+                театральними професіями.
+              </li>
+              <li class="latest__item">
+                Історія про принца, який не зробив домашку, і його чарівну
+                паличку. Чарівна казка, яка перетворюється на спектакль!
+              </li>
+              <li class="latest__item">
+                Театральна сцена – місце, де відбувається чаклунство.
+              </li>
+              <li class="latest__item">
+                А як на сцені скрипить сніг і дме вітер? Дізнаємося театральні
+                таємниці.
+              </li>
+              <li class="latest__item">
+                Час маскараду: беремо ножиці й вирізаємо новорічні наряди героям
+                журналу.
+              </li>
+              <li class="latest__item">
+                В театр по-анлійскій: вчимо мову весело.
+              </li>
+              <li class="latest__item">
+                А тепер час для домашнього спектаклю: робимо настільний театр із
+                героями з казки. Саморобка-сюрприз!
+              </li>
+              <li class="latest__item">
+                Зимовий кросворд, знаходимо відмінності на картинках,
+                розв’язуємо головоломку.
+              </li>
+            </ul>
+            <p class="latest__text">
+              «Розумашки» №12 – яскравий квіток у театр для наших маленьких
+              театралів!
+            </p>
+            <a class="latest__link link button-main" href="#">Передплатити</a>
+          </div>
+        </div>
+      </section>
+      <section class="reviews">
+        <div class="container reviews__container">
+          <h2 class="reviews__title">Відгуки</h2>
+          <div class="reviews__slider">
+            <button class="slider-button" type="button">
+              <svg class="slider-icon">
+                <use href="./img/sprite.svg#icon-left-slider"></use>
+              </svg>
+            </button>
+            <ul class="reviews__list list">
+              <!-- <li class="reviews__item mobile">
+                <img
+                  class="reviews__img"
+                  src="./img/reviews-img.png"
+                  alt="avatar"
+                  width="85"
+                />
+                <h3 class="reviews__person">Oksana Kulabuhova</h3>
+                <p class="reviews__text">
+                  Дуже інформативний, чудово ілюстрований, з цікавими завданнями
+                  і саморобками - найкраще видання, що мені вдалося знайти.
+                </p>
+              </li> -->
+              <li class="reviews__item">
+                <img
+                  class="reviews__img"
+                  src="./img/reviews-img.png"
+                  alt="avatar"
+                  width="85"
+                />
+                <h3 class="reviews__person">Oksana Kulabuhova</h3>
+                <p class="reviews__text">
+                  Дуже інформативний, чудово ілюстрований, з цікавими завданнями
+                  і саморобками - найкраще видання, що мені вдалося знайти.
+                </p>
+              </li>
+              <!-- <li class="reviews__item mobile">
+                <img
+                  class="reviews__img"
+                  src="./img/reviews-img.png"
+                  alt="avatar"
+                  width="85"
+                />
+                <h3 class="reviews__person">Oksana Kulabuhova</h3>
+                <p class="reviews__text">
+                  Дуже інформативний, чудово ілюстрований, з цікавими завданнями
+                  і саморобками - найкраще видання, що мені вдалося знайти.
+                </p>
+              </li> -->
+            </ul>
+            <button class="slider-button" type="button">
+              <svg class="slider-icon" width="24" height="44">
+                <use href="./img/sprite.svg#icon-right-slider"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="cooperation">
+        <div class="container cooperation__container">
+          <h2 class="cooperation__title">Співпраця</h2>
+          <form class="contact-form">
+            <div class="contact-form__left-wrap">
+              <input
+                class="contact-form__input"
+                type="text"
+                name="first-name"
+                placeholder="Ім’я"
+              />
+              <input
+                class="contact-form__input"
+                type="text"
+                name="second-name"
+                placeholder="Прізвище"
+              />
+              <input
+                class="contact-form__input"
+                type="tel"
+                name="phone"
+                placeholder="Номер телефону"
+              />
+              <input
+                class="contact-form__input"
+                type="email"
+                name="email"
+                placeholder="Email"
+              />
+            </div>
+            <div class="contact-form__right-wrap">
+              <textarea
+                class="contact-form__input message"
+                name="message"
+                placeholder="Повідомлення"
+              ></textarea>
+              <button class="contact-form__button button" type="button">
+                Відправити
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container footer__container">
+        <h2 class="footer__title">Контакти</h2>
+        <div class="footer__top-wrap">
+          <div class="footer__address-wrap">
+            <address class="footer-address">
+              <p class="footer-address__name">Адреса редакції:</p>
+              <a
+                class="footer-address__link link"
+                target="_blank"
+                href="https://goo.gl/maps/2SEzkccMcz894jnSA"
+                rel="noopener noreferrer nofollow"
+              >
+                04119, м.Київ, вул. Юрія Іллєнка, 46</a
+              >
+              <p class="footer-address__name">Відділ передплати:</p>
+              <a class="footer-address__link link" href="tel:+380961111111">
+                <span class="footer-address__name">тел.</span> +380 (50)
+                356-65-31
+              </a>
+              <p class="footer-address__name">Відділ розповсюдження:</p>
+              <a class="footer-address__link link" href="tel:+380961111111">
+                <span class="footer-address__name">тел.</span> +380 (50)
+                441-80-75
+              </a>
+
+              <a
+                class="footer-address__link link"
+                href="mailto:rozumashki@ukr.net"
+                ><span class="footer-address__name">e-mail редакції:</span>
+                rozumashki@ukr.net
+              </a>
+            </address>
+          </div>
+          <div class="footer__info">
+            <p class="footer__text">
+              Засновник і видавець: ТОВ «Ко-оп Медіа»
+              <a
+                class="footer-address__link link"
+                href="www.media.coop"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                >www.media.coop</a
+              >
+            </p>
+            <p class="footer__text">
+              Cвідоцтво про державну реєстрацію серія КВ№22812-12712ПР від
+              03.07.2017.
+            </p>
+            <p class="footer__text">
+              У разі передруку матеріалів (тільки з дозволу редакції) посилання
+              на «Розумашки» обов’язкове.
+            </p>
+            <p class="footer__text">&#169; Авторські права захищені.</p>
+          </div>
+        </div>
+        <div class="footer__bottom-wrap">
+          <p class="footer__warning">
+            Матеріали, надіслані до редакції, не рецензуються та не
+            повертаються. Надсилаючи роботу до редакції, автор автоматично дає
+            згоду на використання редакцією надісланого матеріалу на свій розсуд
+            з некомерційною метою.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/menu.js"></script>
+  </body>
+</html>

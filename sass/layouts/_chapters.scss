@@ -1,0 +1,59 @@
+.chapters {
+    position: relative;
+    margin-bottom: 25px;
+    
+    &__title {
+        font-family: $fontAmatic;
+        font-size: $titleFontSize;
+        line-height: 1.27;
+        text-align: center;
+        color: $textColorOrange;
+        margin-bottom: 20px;
+    }
+
+    &__img {
+        margin-right: auto;
+        margin-left: auto;
+        width: 100%;
+    }
+
+&__bg-right {
+    position: absolute;
+    top: 120px;
+    right: 0;
+
+    width: 183px;
+    height: 383px;
+    background-image: url("../img/chapters-right-part.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 183px 383px;
+    opacity: 0.5;
+
+    @include tablet {
+        width: 320px;
+        height: 670px;
+        background-size: 320px 670px;
+    }
+}
+
+&__bg-left {
+    position: absolute;
+    top: 100px;
+    left: 0;
+
+    width: 192px;
+    height: 403px;
+    background-image: url("../img/chapters-left-part.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 192px 403px;
+    opacity: 0.5;
+
+    @include tablet {
+        width: 319px;
+        height: 652px;
+        background-size: 319px 652px;
+    }
+}
+}

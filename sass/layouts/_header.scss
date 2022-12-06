@@ -1,0 +1,22 @@
+.header {
+    position: relative;
+    height: 118px;
+    background: transparent;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.logo__img {
+    margin-left: -10px;
+    @include tablet {
+        margin-left: -15px;
+    }
+    @include desktop {
+        width: 205px;
+        height: 118px;
+    }
+}

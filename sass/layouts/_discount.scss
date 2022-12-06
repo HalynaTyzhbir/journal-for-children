@@ -1,0 +1,158 @@
+.discount {
+    position: relative;
+    padding-bottom: 153px;
+    background-image: linear-gradient(transparent, transparent 30%, 
+    $lightBlue 30%, $lightBlue 85%, transparent 85%, transparent);
+
+    &__top {
+        position: absolute;
+        top: 111px;
+        left: 0px;
+        width: 100%;
+        height: 176px;
+        background-image: url("../img/girl-top-img.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        z-index: -1;
+    }
+
+    &__bottom {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 176px;
+        background-image: url("../img/girl-bottom-img.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        z-index: -1;
+    }
+
+    &__title {
+        font-family: $fontAmatic;
+        font-size: $titleFontSize;
+        text-align: center;
+        line-height: 1.07;
+        color: $textColorLightBlue;
+        margin-bottom: 121px;
+        @include tablet {
+            margin-bottom: 171px;
+        }
+    }
+
+    &__after-title {
+        font-family: $fontAmatic;
+        font-size: $titleFontSize;
+        line-height: 1.07;
+        text-align: center;
+        color: $textColorWhite;
+        margin-bottom: 22px;
+        @include desktop {
+            text-align: left;
+            margin-bottom: 34px;
+        }
+    }
+
+    &__text {
+        font-size: $secondFontSize;
+        line-height: 1.25;
+        text-align: center;
+        color: $textColorWhite;
+        margin-bottom: 23px;
+        @include desktop {
+            text-align: left;
+            max-width: 490px;
+            margin-bottom: 46px;
+        }
+    }
+
+    &__number {
+        display: inline-block;
+        font-family: $fontAmatic;
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 1;
+        color: $textColorWhite;
+        margin-right: 13px;
+    }
+
+    &__price {
+        display: inline-block;
+        font-family: $fontAmatic;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 1.33;
+        text-decoration-line: line-through;
+        color: $textColorWhite;
+        opacity: 0.6;
+    }
+
+    &__info {
+        display: block;
+        font-size: $secondFontSize;
+        line-height: 1.25;
+        color: $textColorWhite;
+    }
+
+    &__item {
+        border: 2px dashed #FFFFFF;
+        
+        border-radius: 20px;
+        width: 270px;
+        height: 118px;
+
+        padding: 9px 13px;
+
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    &__link {
+        background-color: $btnWhiteColor;
+
+        font-family: $fontBalsamiq;
+        font-weight: 700;
+        font-size: $baseFontSize;
+        line-height: 1.22;
+        text-align: center;
+        color: $btnLightBlueColor;
+        @include desktop {
+            margin-left: 0;
+        }
+        transition: color $transition, background-color $transition;
+
+        &:hover, &:focus {
+            color: $textLinkColorWhite;
+            background-color: $btnDarkBlueColor;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 27px;
+        margin-bottom: 27px;
+        @include tablet {
+            flex-direction: row;
+            justify-content: center;
+        }
+        @include desktop {
+            justify-content: flex-start;
+            margin-bottom: 46px;
+        }
+    }
+
+    &__img {
+        @media screen and (max-width:1199px) {
+            display: none;
+        }
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        pointer-events: none;
+    }
+}
