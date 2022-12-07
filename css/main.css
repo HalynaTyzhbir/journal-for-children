@@ -428,6 +428,11 @@ img {
   position: relative;
   padding-top: 26px;
 }
+@media screen and (max-width: 400px) {
+  .about {
+    padding-bottom: 30px;
+  }
+}
 @media screen and (min-width: 768px) {
   .about {
     padding-top: 45px;

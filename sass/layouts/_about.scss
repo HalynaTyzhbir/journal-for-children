@@ -1,4 +1,7 @@
 .about {
+    @media screen and (max-width:400px) {
+            padding-bottom: 30px;;
+        }
     position: relative;
     padding-top: 26px;
     @include tablet {
