@@ -817,9 +817,6 @@ img {
   position: relative;
   padding-bottom: 43px;
 }
-.chapters__container {
-  margin-bottom: 63px;
-}
 .chapters__title {
   font-family: "Amatic SC", cursive;
   font-size: 60px;
@@ -880,29 +877,29 @@ img {
 }
 
 .discount {
-  padding-top: 93px;
-  padding-bottom: 123px;
+  padding-bottom: 136px;
   position: relative;
-  background-image: linear-gradient(transparent, transparent 175px, #00C5F2 175px, #00C5F2 85%, transparent 85%, transparent), url("../img/girl-top-img.png"), url("../img/girl-bottom-img.png");
-  background-position: top, top, bottom;
+  background-image: linear-gradient(transparent, transparent 26%, #00C5F2 26%, #00C5F2 85%, transparent 85%, transparent), url("../img/girl-top-img.png"), url("../img/girl-bottom-img.png");
+  background-position: 0% 0%, 0% 10%, 0% 100%;
   background-repeat: no-repeat;
 }
 @media screen and (min-width: 1200px) {
   .discount {
-    padding-top: 176px;
     padding-bottom: 176px;
   }
 }
 .discount__title {
-  position: absolute;
-  left: 50%;
-  bottom: 100%;
-  transform: translateX(-50%);
   font-family: "Amatic SC", cursive;
   font-size: 60px;
   text-align: center;
   line-height: 1.07;
   color: #00C5F2;
+  margin-bottom: 121px;
+}
+@media screen and (min-width: 1200px) {
+  .discount__title {
+    margin-bottom: 176px;
+  }
 }
 .discount__after-title {
   font-family: "Amatic SC", cursive;
@@ -1009,7 +1006,7 @@ img {
 .discount__img {
   position: absolute;
   top: 0px;
-  right: 40px;
+  right: 30px;
   pointer-events: none;
 }
 @media screen and (max-width: 1199px) {

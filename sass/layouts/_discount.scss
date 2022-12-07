@@ -1,29 +1,28 @@
 .discount {
-    padding-top: 93px;
-    padding-bottom: 123px;
+
+    padding-bottom: 136px;
     @include desktop {
-        padding-top: 176px;
         padding-bottom: 176px;
     }
 
     position: relative;
 
-    background-image: linear-gradient(transparent, transparent 175px, 
-    $lightBlue 175px, $lightBlue 85%, transparent 85%, transparent),
+    background-image: linear-gradient(transparent, transparent 26%, 
+    $lightBlue 26%, $lightBlue 85%, transparent 85%, transparent),
     url("../img/girl-top-img.png"),url("../img/girl-bottom-img.png");
-    background-position: top, top, bottom;
+    background-position:  0% 0%, 0% 10%, 0% 100%;
     background-repeat: no-repeat;
 
     &__title {
-        position: absolute;
-        left: 50%;
-        bottom: 100%;
-        transform: translateX(-50%);
         font-family: $fontAmatic;
         font-size: $titleFontSize;
         text-align: center;
         line-height: 1.07;
         color: $textColorLightBlue;
+        margin-bottom: 121px;
+        @include desktop {
+            margin-bottom: 176px;
+        }
     }
 
     &__after-title {
@@ -137,7 +136,7 @@
         }
         position: absolute;
         top: 0px;
-        right: 40px;
+        right: 30px;
         pointer-events: none;
     }
 }
