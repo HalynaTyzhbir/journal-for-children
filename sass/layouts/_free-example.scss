@@ -1,6 +1,9 @@
 .free-example {
     position: relative;
     padding-bottom: 79px;
+    @include desktop {
+        padding-bottom: 0;
+    }
 
     &__container {
     display: flex;

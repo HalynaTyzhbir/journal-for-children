@@ -1,6 +1,10 @@
 .chapters {
     position: relative;
-    padding-bottom: 25px;
+    padding-bottom: 43px;
+
+    &__container {
+        margin-bottom: 63px;
+    }
     
     &__title {
         font-family: $fontAmatic;

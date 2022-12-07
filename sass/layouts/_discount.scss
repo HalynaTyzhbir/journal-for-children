@@ -1,44 +1,29 @@
 .discount {
+    padding-top: 93px;
+    padding-bottom: 123px;
+    @include desktop {
+        padding-top: 176px;
+        padding-bottom: 176px;
+    }
+
     position: relative;
-    padding-bottom: 153px;
-    background-image: linear-gradient(transparent, transparent 30%, 
-    $lightBlue 30%, $lightBlue 85%, transparent 85%, transparent);
 
-    &__top {
-        position: absolute;
-        top: 111px;
-        left: 0px;
-        width: 100%;
-        height: 176px;
-        background-image: url("../img/girl-top-img.png");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        z-index: -1;
-    }
-
-    &__bottom {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        height: 176px;
-        background-image: url("../img/girl-bottom-img.png");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        z-index: -1;
-    }
+    background-image: linear-gradient(transparent, transparent 175px, 
+    $lightBlue 175px, $lightBlue 85%, transparent 85%, transparent),
+    url("../img/girl-top-img.png"),url("../img/girl-bottom-img.png");
+    background-position: top, top, bottom;
+    background-repeat: no-repeat;
 
     &__title {
+        position: absolute;
+        left: 50%;
+        bottom: 100%;
+        transform: translateX(-50%);
         font-family: $fontAmatic;
         font-size: $titleFontSize;
         text-align: center;
         line-height: 1.07;
         color: $textColorLightBlue;
-        margin-bottom: 121px;
-        @include tablet {
-            margin-bottom: 171px;
-        }
     }
 
     &__after-title {
@@ -151,8 +136,8 @@
             display: none;
         }
         position: absolute;
-        top: 20px;
-        right: 20px;
+        top: 0px;
+        right: 40px;
         pointer-events: none;
     }
 }
