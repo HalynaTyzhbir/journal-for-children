@@ -1,7 +1,7 @@
 .footer {
     padding-top: 96px;
     padding-bottom: 46px;
-    background-image: linear-gradient(transparent, transparent 20%, #00C5F2 20%, #00C5F2), url(../img/footer-top-bg.png);
+    background-image: linear-gradient(transparent, transparent 175px, #00C5F2 175px, #00C5F2), url(../img/footer-top-bg.png);
     background-repeat: no-repeat;
     background-position: top;
     @include desktop {
@@ -77,12 +77,12 @@
         line-height: 1.67;
         color: $textLinkColorWhite;
 
-        &:last-child {
-            display: block;
-        }
-
         &:hover, &:focus {
             color: $btnDarkBlueColor;
         }
+    }
+
+    .footer-last {
+        display: block;
     }
 }

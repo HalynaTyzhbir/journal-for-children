@@ -1,6 +1,6 @@
 .chapters {
     position: relative;
-    margin-bottom: 25px;
+    padding-bottom: 25px;
     
     &__title {
         font-family: $fontAmatic;
@@ -9,6 +9,9 @@
         text-align: center;
         color: $textColorOrange;
         margin-bottom: 20px;
+        @include desktop {
+            margin-bottom: 0;
+        }
     }
 
     &__img {
@@ -19,7 +22,7 @@
 
 &__bg-right {
     position: absolute;
-    top: 120px;
+    top: 240px;
     right: 0;
 
     width: 183px;
@@ -29,6 +32,7 @@
     background-position: center;
     background-size: 183px 383px;
     opacity: 0.5;
+    z-index: -1;
 
     @include tablet {
         width: 320px;
@@ -39,7 +43,7 @@
 
 &__bg-left {
     position: absolute;
-    top: 100px;
+    top: 240px;
     left: 0;
 
     width: 192px;
@@ -49,6 +53,7 @@
     background-position: center;
     background-size: 192px 403px;
     opacity: 0.5;
+    z-index: -1;
 
     @include tablet {
         width: 319px;
