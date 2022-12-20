@@ -141,8 +141,8 @@
         transition: fill $transition, stroke $transition;
         &:hover .slider-icon,
         &:focus .slider-icon {
-            color: $Orange;
-            stroke: $Orange;
+            color: $btnLightBlueColor;
+            stroke: $btnLightBlueColor;
         }
     }
 
