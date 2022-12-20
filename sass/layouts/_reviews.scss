@@ -1,7 +1,4 @@
 .reviews{
-    @media screen and (max-width:413px) {
-        display: none;
-    }
     margin-bottom: 85px;
 
     &__title {
@@ -48,16 +45,17 @@
         align-items: center;
         transition: all 0.3s ease;
         @include desktop {
-        opacity: 0.2;
-        scale: 0.8;
+        opacity: 0.6;
         }
         &.slick-center {
             opacity: 1;
-            scale: 1;
         }
     }
 
     &__box {
+        @media screen and (max-width:414px) {
+            width: 270px;
+        }
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -90,26 +88,62 @@
 
     &__slider {
         position: relative;
-        // padding: 0 60px;
+        margin: 0 -5px;
     }
+
+    @media screen and (min-width:1199px) {
+    &__slider::before {
+        content: ' ';
+        display: block;
+        height: 100%;
+        width: 200px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: linear-gradient(to right, rgba(255,255,255,1)20%, rgba(255,255,255,0)80%);
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    &__slider::after {
+        content: ' ';
+        display: block;
+        height: 100%;
+        width: 200px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-image: linear-gradient(to left, rgba(255, 255, 255, 1)20%, rgba(255, 255, 255, 0)80%);
+        z-index: 1;
+        pointer-events: none;
+    }
+}
 
     .right {
         position: absolute;
         right: 0px;
-        bottom: 50%;
-        transform: translateY(50%);
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
     }
 
     .left {
         position: absolute;
         left: 0px;
-        bottom: 50%;
-        transform: translateY(50%);
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
     }
 
     .slider-button {
         background: transparent;
         border: transparent;
+        transition: fill $transition, stroke $transition;
+        &:hover .slider-icon,
+        &:focus .slider-icon {
+            color: $Orange;
+            stroke: $Orange;
+        }
     }
 
     .slider-icon {
@@ -132,6 +166,7 @@
 
     .slick-list {
         overflow: hidden;
+        margin: 0 5px;
     }
 }
 

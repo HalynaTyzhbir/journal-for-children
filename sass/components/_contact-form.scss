@@ -25,8 +25,18 @@
         width: 309px;
         min-height: 62px;
         border: 1px solid $btnDarkBlueColor;
+        outline: 1px solid $btnDarkBlueColor;
         border-radius: 20px;
         padding: 10px 20px;
+        font-family: $fontBalsamiq;
+        font-size: 20px;
+        line-height: 1.86;
+        color: $textColorDarkBlue;
+        transition: border $transition;
+
+        &:hover, &:focus {
+            border: 1px solid $btnLightBlueColor;
+        }
 
         &::placeholder {
             font-family: $fontBalsamiq;

@@ -1,7 +1,7 @@
 $(document).ready(function (){
     $('.slider').slick({
         arrows: false,
-        slidesToShow:3,
+        slidesToShow: 3,
         centerMode: true,
         variableWidth: true,
         adaptiveHeight: true,
@@ -9,6 +9,7 @@ $(document).ready(function (){
         breakpoint: 1200,
         settings: {
             slidesToShow: 1,
+            centerMode:false,
             variableWidth: false
             }
     }]
