@@ -1,11 +1,8 @@
 .reviews{
-    margin-bottom: 85px;
-
-    &__container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    @media screen and (max-width:413px) {
+        display: none;
     }
+    margin-bottom: 85px;
 
     &__title {
         font-family: $fontAmatic;
@@ -13,9 +10,9 @@
         line-height: 1.27;
         text-align: center;
         color: $textColorDarkBlue;
-        margin-bottom: 70px;
-        @include desktop {
-            margin-bottom: 94px;
+        margin-bottom: 28px;
+        @include tablet {
+            margin-bottom: 30px;
         }
     }
 
@@ -25,9 +22,11 @@
         line-height: 1.25;
         text-align: center;
         color: $textColorDarkBlue;
-        margin-bottom: 17px;
-        @include desktop {
+        margin-top: 77px;
+        margin-bottom: 13px;
+        @include tablet {
             font-size: 48px;
+            margin-top: 117px;
         }
     }
 
@@ -36,71 +35,79 @@
         line-height: 1.7;
         text-align: center;
         color: $textColorDarkBlue;
-        @include desktop {
+        @include tablet {
             font-size: $baseFontSize;
             line-height: 1.67;
         }
     }
 
     &__item {
-        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        transition: all 0.3s ease;
+        @include desktop {
+        opacity: 0.2;
+        scale: 0.8;
+        }
+        &.slick-center {
+            opacity: 1;
+            scale: 1;
+        }
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
         border: 2px solid #322F82;
         box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.4);
         border-radius: 30px;
 
         width: 328px;
-
-        padding: 65px 5px 25px;
-        @include desktop {
+        padding-right: 10px;
+        padding-left: 10px;
+        padding-bottom: 15px;
+        
+        @include tablet {
             width: 498px;
-            padding: 97px 30px 40px;
+            padding: 0 25px 30px;
         }
     }
 
     &__img {
-        position: absolute;
+        margin-top: -65px;
+        transform: translateY(65px);
 
-        top: -20%;
-        left: 50%;
-
-        transform: translateX(-50%);
-        @include desktop {
+        @include tablet {
+            transform: translateY(90px);
+            margin-top: -90px;
             width: 128px;
         }
     }
 
-    &__list {
-        @include desktop {
-            display: flex;
-            gap: 22px;
-        }
+    &__slider {
+        position: relative;
+        // padding: 0 60px;
     }
 
-    // .mobile {
-    //     scale: 50%;
-    //     @media screen and (max-width:1200px){
-    //         display: none;
-    //     }
-    // }
+    .right {
+        position: absolute;
+        right: 0px;
+        bottom: 50%;
+        transform: translateY(50%);
+    }
 
-    &__slider {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        @include mobile {
-            gap: 20px;
-        }
-        @include tablet {
-            gap: 40px;
-        }
+    .left {
+        position: absolute;
+        left: 0px;
+        bottom: 50%;
+        transform: translateY(50%);
     }
 
     .slider-button {
-        @media screen and (max-width:420px){
-            display: none;
-        }
         background: transparent;
         border: transparent;
     }
@@ -110,5 +117,23 @@
         height: 44px;
         fill:$btnDarkBlueColor;
         stroke: $btnDarkBlueColor;
+        @include desktop {
+            width: 44px;
+        }
+    }
+
+    .slick-track {
+        display: flex;
+        align-items: flex-start;
+        @include desktop {
+        gap: 42px;
+        }
+    }
+
+    .slick-list {
+        overflow: hidden;
     }
 }
+
+
+
